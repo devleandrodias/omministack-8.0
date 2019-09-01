@@ -1,12 +1,12 @@
 import React from 'react';
-import Route from './routes';
+import Global from './styles/global';
+import Routes from './routes';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Route />
-    </div>
+    <>
+      <Routes />
+      <Global />
+    </>
   );
 }
-
-export default App;
