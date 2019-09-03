@@ -7,6 +7,7 @@ import Container from '../../components/container';
 import { Loading, Owner, IssuesList } from './styles';
 
 export default class Repository extends Component {
+  // eslint-disable-next-line react/static-property-placement
   static propTypes = {
     match: PropTypes.shape({
       params: PropTypes.shape({
