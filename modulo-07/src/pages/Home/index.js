@@ -38,7 +38,7 @@ export default class Home extends Component {
 
             <button type="button">
               <div>
-                <MdAddShoppingCart size={16} color="#fff" /> 3
+                <MdAddShoppingCart size={16} color="#fff" /> 0
               </div>
               <span>Adicionar ao carrinho</span>
             </button>
