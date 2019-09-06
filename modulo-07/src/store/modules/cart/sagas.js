@@ -5,6 +5,7 @@
 // select é responsavel por acessar o estado dentro do redux
 
 import { call, put, all, takeLatest, select } from 'redux-saga/effects';
+import { toast } from 'react-toastify';
 
 import { addToCartSuccess, updateAmount } from './actions';
 import api from '../../../service/api';
@@ -22,7 +23,7 @@ function* addToCart({ id }) {
   const amount = currentAmount + 1;
 
   if (amount > stockAmount) {
-    console.tron.warn('erro');
+    toast.error('Quantidade solicitada fora do estoque!');
     return;
   }
 
