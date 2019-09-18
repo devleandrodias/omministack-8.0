@@ -11,6 +11,7 @@ import AppointmentsController from '../app/controllers/AppointmentsController';
 
 import authMiddleware from '../app/middlewares/auth';
 import ScheduleController from '../app/controllers/ScheduleController';
+import NotificationController from '../app/controllers/NotificationController';
 
 const routes = Router();
 const upload = multer(multerConfig);
@@ -30,5 +31,7 @@ routes.post('/appointments', AppointmentsController.store);
 routes.get('/appointments', AppointmentsController.index);
 
 routes.get('/schedule', ScheduleController.index);
+
+routes.get('/notification', NotificationController.index);
 
 export default routes;
