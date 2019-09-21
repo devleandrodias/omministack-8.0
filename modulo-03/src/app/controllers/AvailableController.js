@@ -5,10 +5,10 @@ import {
   setMinutes,
   setSeconds,
   isAfter,
+  format,
 } from 'date-fns';
 import { Op } from 'sequelize';
 
-import { format } from 'date-fns/esm';
 import Appointments from '../models/Appointments';
 
 class Available {
