@@ -14,10 +14,12 @@ import authMiddleware from '../app/middlewares/auth';
 import ScheduleController from '../app/controllers/ScheduleController';
 import NotificationController from '../app/controllers/NotificationController';
 
+import validateUserStore from '../app/validators/UserStore';
+
 const routes = Router();
 const upload = multer(multerConfig);
 
-routes.post('/users', UserController.store);
+routes.post('/users', validateUserStore, UserController.store);
 routes.post('/session', SessionController.store);
 
 routes.use(authMiddleware);
