@@ -11,10 +11,12 @@ import Profile from '../pages/Profile/index';
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/" component={SingIn} />
+      <Route path="/login" component={SingIn} />
       <Route path="/register" component={SingUp} />
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
+
+      <Route path="/" component={() => <h1>404 - Página Não Encontrada</h1>} />
     </Switch>
   );
 }
