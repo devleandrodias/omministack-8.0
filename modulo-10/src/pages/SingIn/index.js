@@ -1,14 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { Form, Input } from '@rocketseat/unform';
 
 import singInValidation from '../../validations/singInValidValidations';
+import { singInRequest } from '../../store/modules/auth/actions';
 
 import logo from '../../assets/logo.svg';
 
 export default function SingIn() {
-  function handleSubmit(data) {
-    console.tron.log(data);
+  const dispatch = useDispatch();
+
+  function handleSubmit({ email, password }) {
+    dispatch(singInRequest(email, password));
   }
 
   return (
